@@ -38,6 +38,14 @@ input {
   padding: 8px;
 }
 
+.hidden {
+  display: none;
+}
+
+#icon {
+  padding-top: 2rem;
+}
+
 button {
   cursor: pointer;
   border: 1px solid #888888;

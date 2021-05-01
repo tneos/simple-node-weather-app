@@ -2,6 +2,7 @@ const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 let messageOne = document.querySelector("#message-1");
 let messageTwo = document.querySelector("#message-2");
+let icon = document.querySelector("#icon");
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -13,6 +14,8 @@ weatherForm.addEventListener("submit", (e) => {
         messageOne.textContent = data.error;
         messageTwo.textContent = "";
       } else {
+        icon.classList.remove("hidden");
+        icon.src = data.icon;
         messageOne.textContent = data.location;
         messageTwo.textContent = data.forecast;
       }
